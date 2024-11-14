@@ -34,7 +34,7 @@
         <dependency> <!-- Swing Look & Feel -->
             <groupId>com.github.Valkryst</groupId>
             <artifactId>VTerminal</artifactId>
-            <version>bdaea156d6550c83f886ca3356cdb61676a68ffa</version>
+            <version>3.6.1</version>
         </dependency>
 
         <dependency> <!-- BufferedImageOps for visually testing the VPanel. -->
