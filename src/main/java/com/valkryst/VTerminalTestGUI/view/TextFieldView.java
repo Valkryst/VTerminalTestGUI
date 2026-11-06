@@ -1,18 +1,18 @@
 package com.valkryst.VTerminalTestGUI.view;
 
-import com.valkryst.VTerminal.component.VTextField;
+import javax.swing.JTextField;
 
 import java.beans.PropertyChangeEvent;
 
 public class TextFieldView extends View {
 	public TextFieldView() {
-		var component = new VTextField();
-		component.setText("This VTextField is enabled.");
+		var component = new JTextField();
+		component.setText("This JTextField is enabled.");
 		this.add(component);
 
-		component = new VTextField();
+		component = new JTextField();
 		component.setEnabled(false);
-		component.setText("This VTextField is disabled.");
+		component.setText("This JTextField is disabled.");
 		this.add(component);
 	}
 

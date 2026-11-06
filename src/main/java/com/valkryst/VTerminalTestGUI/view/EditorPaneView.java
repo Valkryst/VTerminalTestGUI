@@ -1,6 +1,6 @@
 package com.valkryst.VTerminalTestGUI.view;
 
-import com.valkryst.VTerminal.component.VEditorPane;
+import javax.swing.JEditorPane;
 
 import java.awt.*;
 import java.beans.PropertyChangeEvent;
@@ -9,7 +9,7 @@ public class EditorPaneView extends View {
 	public EditorPaneView() {
 		this.setLayout(new BorderLayout());
 
-		var component = new VEditorPane();
+		var component = new JEditorPane();
 		component.setContentType("text/html");
 		component.setEditable(true);
 		component.setText("<html>\n" +
@@ -21,12 +21,12 @@ public class EditorPaneView extends View {
                           "		</style>\n" +
                           "	</head>\n" +
                           "	<body>\n" +
-                          "		<p>This <i>VEditorPane</i> is editable and <b>enabled</b>.</p>\n" +
+                          "		<p>This <i>JEditorPane</i> is editable and <b>enabled</b>.</p>\n" +
                           "	</body>\n" +
                           "</html>\n");
 		this.add(component, BorderLayout.NORTH);
 
-		component = new VEditorPane();
+		component = new JEditorPane();
 		component.setContentType("text/html");
 		component.setEditable(true);
 		component.setEnabled(false);
@@ -39,7 +39,7 @@ public class EditorPaneView extends View {
                           "		</style>\n" +
                           "	</head>\n" +
                           "	<body>\n" +
-                          "		<p>This <i>VEditorPane</i> is editable and <b>disabled</b>.</p>\n" +
+                          "		<p>This <i>JEditorPane</i> is editable and <b>disabled</b>.</p>\n" +
                           "	</body>\n" +
                           "</html>\n");
 		this.add(component, BorderLayout.SOUTH);

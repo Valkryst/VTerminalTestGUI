@@ -1,6 +1,5 @@
 package com.valkryst.VTerminalTestGUI.view;
 
-import com.valkryst.VTerminal.component.VTextPane;
 
 import javax.swing.*;
 import javax.swing.text.BadLocationException;
@@ -12,15 +11,15 @@ import java.beans.PropertyChangeEvent;
 
 public class TextPaneView extends View {
 	public TextPaneView() {
-		var component = new VTextPane();
+		var component = new JTextPane();
 		component.setEditable(true);
-		addColoredText(component, "This VTextPane is enabled.");
+		addColoredText(component, "This JTextPane is enabled.");
 		this.add(component);
 
-		component = new VTextPane();
+		component = new JTextPane();
 		component.setEditable(true);
 		component.setEnabled(false);
-		addColoredText(component, "This VTextPane is disabled.");
+		addColoredText(component, "This JTextPane is disabled.");
 		this.add(component);
 	}
 

@@ -1,18 +1,18 @@
 package com.valkryst.VTerminalTestGUI.view;
 
-import com.valkryst.VTerminal.component.VPasswordField;
+import javax.swing.JPasswordField;
 
 import java.beans.PropertyChangeEvent;
 
 public class PasswordFieldView extends View {
 	public PasswordFieldView() {
-		var component = new VPasswordField();
-		component.setText("This VPasswordField is enabled.");
+		var component = new JPasswordField();
+		component.setText("This JPasswordField is enabled.");
 		this.add(component);
 
-		component = new VPasswordField();
+		component = new JPasswordField();
 		component.setEnabled(false);
-		component.setText("This VPasswordField is disabled.");
+		component.setText("This JPasswordField is disabled.");
 		this.add(component);
 	}
 
