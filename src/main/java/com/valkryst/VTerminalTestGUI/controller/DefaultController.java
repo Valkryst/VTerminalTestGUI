@@ -1,13 +1,24 @@
 package com.valkryst.VTerminalTestGUI.controller;
 
+import com.valkryst.VTerminal.plaf.VTerminalLookAndFeel;
 import com.valkryst.VTerminalTestGUI.Display;
 import com.valkryst.VTerminalTestGUI.view.*;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class DefaultController extends Controller {
 	public void displayMainView() {
 		Display.getInstance().setLayout(new BorderLayout());
+
+		final var renderingHintsCheckBox = new JCheckBox("High-Quality Rendering Hints", true);
+		renderingHintsCheckBox.addActionListener(e -> {
+			VTerminalLookAndFeel.enableHighQualityRendering(renderingHintsCheckBox.isSelected());
+			Display.getInstance().getFrame().repaint();
+		});
+		final var toolbar = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		toolbar.add(renderingHintsCheckBox);
+		Display.getInstance().getFrame().add(toolbar, BorderLayout.NORTH);
 
 		final var tabbedPaneView = new TabbedPaneView();
 		this.addView(tabbedPaneView, BorderLayout.CENTER);
